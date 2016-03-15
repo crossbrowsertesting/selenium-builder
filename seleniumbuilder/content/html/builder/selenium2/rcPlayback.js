@@ -145,7 +145,7 @@ builder.selenium2.rcPlayback.run = function(settings, postRunCallback, jobStarte
     "browserName":browserstring||"firefox",
     "version":browserversion||"",
     "platform":platform||"ANY"
-  };
+  } || settings.caps;
   
   for (var key in settings) {
     if (!{hostPort:1, browserstring:1, browserversion: 1, platform: 1}[key]) {
